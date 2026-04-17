@@ -1,10 +1,17 @@
 # Data Analysis Agent
 
-An AI-powered data analysis agent that lets you ask questions about any CSV dataset in plain English. The agent uses Claude's API to automatically write and execute SQL queries, handle errors, and present results — no SQL knowledge required.
+An AI-powered data analysis agent that lets you ask questions about any dataset in plain English. The agent uses Claude's API to automatically write and execute SQL queries, handle errors, and present results — no SQL knowledge required.
+
+## Supported File Types
+
+- **CSV** (.csv) — comma-separated values
+- **XLSX** (.xlsx) — Excel spreadsheets
+- **TSV** (.tsv) — tab-separated values
+- **SQLite** (.db, .sqlite, .sqlite3) — database files with single or multiple tables
 
 ## How It Works
 
-1. You provide a CSV file
+1. You point the agent at a data file (any supported type)
 2. The agent loads it into an in-memory SQLite database
 3. You ask questions in plain English
 4. The agent figures out what SQL to run, executes it, and gives you the answer
@@ -14,11 +21,17 @@ Under the hood, this is an LLM agent loop: Claude receives your question, decide
 ## Example
 
 ```
+Enter the path to your data file: sales_data.csv
+Loaded sales_data.csv
+  Columns: product, category, price, quantity, date, region
+  Rows: 49
+
 You: What product generated the most revenue?
   [1] Examining dataset structure...
   [2] Running: SELECT product, category, CAST(price AS REAL) * CAST(quantity AS INTEGER) AS revenue FROM data ORDER BY revenue DESC LIMIT 1
 
-Agent: The product that generated the most revenue is the **Laptop** in the Electronics category, with a total revenue of $4,999.95 (priced at $999.99 with 5 units sold).
+Agent: The product that generated the most revenue is the Laptop in the Electronics
+category, with a total revenue of $4,999.95 (priced at $999.99 with 5 units sold).
 ```
 
 ## Setup
@@ -38,7 +51,7 @@ Agent: The product that generated the most revenue is the **Laptop** in the Elec
 
 3. Install dependencies:
    ```
-   pip install anthropic python-dotenv
+   pip install anthropic python-dotenv openpyxl
    ```
 
 4. Create a `.env` file and add your Anthropic API key:
@@ -55,7 +68,7 @@ Agent: The product that generated the most revenue is the **Laptop** in the Elec
 
 The agent has access to two tools:
 
-- **describe_dataset** — Returns column names, types, and sample rows so the agent can understand the data before querying it
+- **describe_dataset** — Returns all table names, column info, and sample rows so the agent can understand the data before querying
 - **run_sql_query** — Executes a SQL query against the dataset and returns results. Includes error handling so the agent can fix and retry failed queries
 
 ## Tech Stack
@@ -63,8 +76,11 @@ The agent has access to two tools:
 - Python
 - Anthropic Claude API (Sonnet 4.6)
 - SQLite (in-memory)
+- openpyxl (Excel file support)
 - Tool use / function calling
 
 ## Using Your Own Data
 
-Replace `sales_data.csv` with any CSV file and run the agent. It automatically detects columns and loads the data. No code changes needed.
+Run the agent and enter the path to any supported file. It automatically detects the file type, reads the data, and loads it for querying. No code changes needed.
+
+For files in the same folder, just type the filename. For files anywhere else on your computer, paste the full path.
