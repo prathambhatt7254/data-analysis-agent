@@ -1,0 +1,50 @@
+product,category,price,quantity,date,region
+Laptop,Electronics,999.99,5,2024-01-15,East
+Phone,Electronics,699.99,12,2024-01-16,West
+Headphones,Electronics,149.99,25,2024-01-16,East
+Desk,Furniture,349.99,3,2024-01-17,North
+Chair,Furniture,249.99,8,2024-01-17,South
+Monitor,Electronics,399.99,7,2024-01-18,East
+Keyboard,Electronics,79.99,30,2024-01-18,West
+Bookshelf,Furniture,199.99,4,2024-01-19,North
+Tablet,Electronics,449.99,10,2024-01-20,South
+Lamp,Furniture,59.99,15,2024-01-20,East
+Mouse,Electronics,29.99,45,2024-01-21,West
+Sofa,Furniture,899.99,2,2024-01-21,North
+T-Shirt,Clothing,24.99,60,2024-01-15,East
+Jeans,Clothing,49.99,35,2024-01-16,West
+Jacket,Clothing,89.99,20,2024-01-17,South
+Sneakers,Clothing,119.99,18,2024-01-18,North
+Hat,Clothing,14.99,50,2024-01-19,East
+Apples,Groceries,3.99,100,2024-01-15,West
+Bread,Groceries,4.49,80,2024-01-16,East
+Milk,Groceries,5.99,90,2024-01-17,North
+Chicken,Groceries,12.99,40,2024-01-18,South
+Rice,Groceries,8.99,55,2024-01-19,West
+Pasta,Groceries,2.99,70,2024-01-20,East
+Coffee,Groceries,14.99,45,2024-01-21,North
+Wrench,Tools,19.99,22,2024-01-15,South
+Drill,Tools,89.99,10,2024-01-16,East
+Hammer,Tools,15.99,28,2024-01-17,West
+Screwdriver Set,Tools,34.99,15,2024-01-18,North
+Tape Measure,Tools,9.99,35,2024-01-19,South
+Paint Roller,Tools,12.99,20,2024-01-20,East
+Saw,Tools,44.99,8,2024-01-21,West
+Novel,Books,16.99,30,2024-01-15,North
+Textbook,Books,79.99,12,2024-01-16,East
+Cookbook,Books,24.99,18,2024-01-17,South
+Biography,Books,19.99,22,2024-01-18,West
+Self-Help Book,Books,14.99,40,2024-01-19,North
+Yoga Mat,Sports,29.99,25,2024-01-15,East
+Dumbbells,Sports,49.99,15,2024-01-16,South
+Basketball,Sports,27.99,20,2024-01-17,West
+Running Shoes,Sports,109.99,14,2024-01-18,North
+Water Bottle,Sports,12.99,50,2024-01-19,East
+Jump Rope,Sports,9.99,35,2024-01-20,South
+Resistance Bands,Sports,19.99,30,2024-01-21,West
+Shampoo,Health & Beauty,8.99,40,2024-01-15,North
+Toothpaste,Health & Beauty,4.99,55,2024-01-16,East
+Sunscreen,Health & Beauty,12.99,30,2024-01-17,South
+Vitamins,Health & Beauty,24.99,20,2024-01-18,West
+Face Cream,Health & Beauty,34.99,15,2024-01-19,North
+Lipstick,Health & Beauty,9.99,25,2024-01-20,East
